@@ -9,7 +9,7 @@
     "version": "0.0.50"
   },
   "dependencies": {
-    "@shopify/flash-list": "1.4.1",
+    "@shopify/flash-list": "^1.6.0",
     "react-virtuoso": "4.0.8"
   },
   "devDependencies": {
