@@ -29,13 +29,13 @@ var GridLayoutProviderWithProps = /** @class */ (function (_super) {
         return _this;
     }
     GridLayoutProviderWithProps.prototype.updateProps = function (props) {
-        this._hasExpired = this.props.numColumns !== props.numColumns;
         var newInsetValues = (0, ContentContainerUtils_1.applyContentContainerInsetForLayoutManager)({
             height: 0,
             width: 0,
         }, props.contentContainerStyle, Boolean(props.horizontal));
         this._hasExpired =
             this._hasExpired ||
+                this.props.numColumns !== props.numColumns ||
                 newInsetValues.height !== this.renderWindowInsets.height ||
                 newInsetValues.width !== this.renderWindowInsets.width;
         this.renderWindowInsets = newInsetValues;
@@ -53,6 +53,12 @@ var GridLayoutProviderWithProps = /** @class */ (function (_super) {
         enumerable: false,
         configurable: true
     });
+    /**
+     * Calling this method will mark the layout provider as expired. As a result, a new one will be created by FlashList and old cached layouts will be discarded.
+     */
+    GridLayoutProviderWithProps.prototype.markExpired = function () {
+        this._hasExpired = true;
+    };
     /**
      * Calling this method will help the layout provider track average item sizes on its own
      * Overriding layout manager can help achieve the same thing without relying on this method being called however, it will make implementation very complex for a simple use case

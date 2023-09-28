@@ -43,7 +43,7 @@ describe("ContentContainerUtils", function () {
             paddingLeft: 0,
             paddingRight: 0,
         });
-        expect((0, ContentContainerUtils_1.updateContentStyle)({}, { paddingLeft: "1", paddingVertical: "1" })).toEqual({
+        expect((0, ContentContainerUtils_1.updateContentStyle)({}, { paddingLeft: 1, paddingVertical: 1 })).toEqual({
             paddingTop: 1,
             paddingBottom: 1,
             paddingLeft: 1,

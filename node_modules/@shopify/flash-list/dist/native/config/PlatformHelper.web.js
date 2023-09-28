@@ -5,6 +5,8 @@ var react_native_1 = require("react-native");
 var DefaultJSItemAnimator_1 = require("recyclerlistview/dist/reactnative/platform/reactnative/itemanimators/defaultjsanimator/DefaultJSItemAnimator");
 var PlatformConfig = {
     defaultDrawDistance: 2000,
+    invertedTransformStyle: { transform: [{ scaleY: -1 }] },
+    invertedTransformStyleHorizontal: { transform: [{ scaleX: -1 }] },
 };
 exports.PlatformConfig = PlatformConfig;
 var getCellContainerPlatformStyles = function (inverted, parentProps) {

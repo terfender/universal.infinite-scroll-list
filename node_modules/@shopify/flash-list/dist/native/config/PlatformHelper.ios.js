@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.getFooterContainer = exports.getItemAnimator = exports.getCellContainerPlatformStyles = exports.PlatformConfig = void 0;
 var PlatformConfig = {
     defaultDrawDistance: 250,
+    invertedTransformStyle: { transform: [{ scaleY: -1 }] },
+    invertedTransformStyleHorizontal: { transform: [{ scaleX: -1 }] },
 };
 exports.PlatformConfig = PlatformConfig;
 var getCellContainerPlatformStyles = function (inverted, parentProps) {

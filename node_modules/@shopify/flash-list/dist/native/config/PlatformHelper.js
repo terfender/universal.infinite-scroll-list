@@ -4,6 +4,8 @@ exports.getFooterContainer = exports.getItemAnimator = exports.getCellContainerP
 var DefaultJSItemAnimator_1 = require("recyclerlistview/dist/reactnative/platform/reactnative/itemanimators/defaultjsanimator/DefaultJSItemAnimator");
 var PlatformConfig = {
     defaultDrawDistance: 250,
+    invertedTransformStyle: { transform: [{ scaleY: -1 }] },
+    invertedTransformStyleHorizontal: { transform: [{ scaleX: -1 }] },
 };
 exports.PlatformConfig = PlatformConfig;
 var getCellContainerPlatformStyles = function (inverted, parentProps) {

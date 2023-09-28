@@ -113,6 +113,10 @@ declare class FlashList<T> extends React.PureComponent<FlashListProps<T>, FlashL
      */
     get firstItemOffset(): number;
     /**
+     * FlashList will skip using layout cache on next update. Can be useful when you know the layout will change drastically for example, orientation change when used as a carousel.
+     */
+    clearLayoutCacheOnUpdate(): void;
+    /**
      * Tells the list an interaction has occurred, which should trigger viewability calculations, e.g. if waitForInteractions is true and the user has not scrolled.
      * This is typically called by taps on items or by navigation actions.
      */

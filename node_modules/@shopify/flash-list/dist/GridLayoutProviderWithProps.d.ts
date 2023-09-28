@@ -24,6 +24,10 @@ export default class GridLayoutProviderWithProps<T> extends GridLayoutProvider {
      */
     get hasExpired(): boolean;
     /**
+     * Calling this method will mark the layout provider as expired. As a result, a new one will be created by FlashList and old cached layouts will be discarded.
+     */
+    markExpired(): void;
+    /**
      * Calling this method will help the layout provider track average item sizes on its own
      * Overriding layout manager can help achieve the same thing without relying on this method being called however, it will make implementation very complex for a simple use case
      * @param index Index of the item being reported
